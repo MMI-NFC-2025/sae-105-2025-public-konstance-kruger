@@ -1,0 +1,103 @@
+/* ============================
+   PAGE CONTACT (contact.html)
+   ============================ */
+
+.contact-section {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl) var(--spacing-md);
+  padding-top: calc(var(--spacing-xl) + 20px);
+  min-height: 100vh;
+}
+
+.contact-title {
+  color: var(--color-red);
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  letter-spacing: 2px;
+}
+
+/* ============================
+   FORMULAIRE
+   ============================ */
+
+.contact-form {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: var(--spacing-lg);
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  color: var(--color-dark);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.5px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  font-family: var(--font-main);
+  font-size: 15px;
+  color: var(--color-dark);
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-red);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Sous-titre COORDONNÉES */
+.form-subtitle {
+  color: var(--color-dark);
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 1px;
+}
+
+/* Bouton ENVOYER */
+.form-submit {
+  width: 100%;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  padding: var(--spacing-md);
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: var(--spacing-lg);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #6B1313;
+  transform: translateY(-2px);
+}
+
+.form-submit:active {
+  transform: translateY(0);
+}

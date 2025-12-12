@@ -1,0 +1,68 @@
+/* ============================
+   PAGE NOTRE SCÈNE (scene.html)
+   ============================ */
+
+.scene-section {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl) var(--spacing-md);
+  padding-top: calc(var(--spacing-xl) + 20px);
+  min-height: 100vh;
+}
+
+.scene-title {
+  color: var(--color-red);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  letter-spacing: 2px;
+}
+
+/* ============================
+   IMAGE DE LA SCÈNE
+   ============================ */
+
+.scene-image-container {
+  max-width: 500px;
+  margin: 0 auto var(--spacing-lg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.scene-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================
+   SOUS-TITRE ET DESCRIPTION
+   ============================ */
+
+.scene-subtitle {
+  color: var(--color-red);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: 2px;
+}
+
+.scene-description {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.scene-description p {
+  color: var(--color-dark);
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: var(--spacing-md);
+}
+
+.scene-description p:last-child {
+  margin-bottom: 0;
+}

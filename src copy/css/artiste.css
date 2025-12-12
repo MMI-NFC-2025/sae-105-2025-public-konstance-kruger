@@ -1,0 +1,439 @@
+/* ============================
+   PAGE ARTISTE (artiste-rb-dance.html)
+   ============================ */
+
+/* ============================
+   HERO ARTISTE
+   ============================ */
+.artiste-hero {
+  background: 
+    linear-gradient(135deg, rgba(255, 193, 7, 0.9) 0%, rgba(255, 160, 0, 0.9) 100%),
+    url('../img/rb-dance-hero.jpg') center/cover no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: calc(var(--header-height) + 60px) 20px 60px;
+}
+
+.artiste-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.artiste-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.artiste-tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.artiste-hero-title {
+  color: #FFFFFF;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.artiste-hero-info {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.artiste-separator {
+  opacity: 0.6;
+}
+
+/* ============================
+   CAROUSEL
+   ============================ */
+.carousel-section {
+  background-color: #F8F8F8;
+  padding: 60px 20px;
+}
+
+.carousel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Boutons navigation */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+  background-color: #FFC107;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn svg {
+  color: #1A1A1A;
+}
+
+.carousel-prev {
+  left: 20px;
+}
+
+.carousel-next {
+  right: 20px;
+}
+
+/* Indicateurs */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-indicator.active {
+  background-color: #FFC107;
+  transform: scale(1.3);
+}
+
+.carousel-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================
+   SECTIONS CONTENU
+   ============================ */
+.artiste-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.artiste-presentation,
+.artiste-infos,
+.artiste-spectacle {
+  padding: 60px 20px;
+}
+
+.artiste-presentation {
+  background-color: #FFFFFF;
+}
+
+.artiste-infos {
+  background-color: #F8F8F8;
+}
+
+.artiste-spectacle {
+  background-color: #FFFFFF;
+}
+
+.artiste-presentation h3,
+.artiste-infos h3,
+.artiste-spectacle h3 {
+  color: #FFC107;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.artiste-presentation p {
+  color: #424242;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ============================
+   INFOS GRID
+   ============================ */
+.infos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: #FFF8E1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon svg {
+  color: #FFC107;
+}
+
+.info-content h4 {
+  color: #1A1A1A;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.info-content p {
+  color: #757575;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ============================
+   SPECTACLE
+   ============================ */
+.spectacle-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.spectacle-text p {
+  color: #424242;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.spectacle-highlights {
+  background-color: #FFF8E1;
+  padding: 24px;
+  border-radius: 16px;
+  border-left: 4px solid #FFC107;
+}
+
+.spectacle-highlights h4 {
+  color: #1A1A1A;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.spectacle-highlights ul {
+  list-style: none;
+}
+
+.spectacle-highlights li {
+  color: #424242;
+  font-size: 15px;
+  line-height: 1.6;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.spectacle-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #FFC107;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* ============================
+   CTA
+   ============================ */
+.artiste-cta {
+  background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.artiste-cta h3 {
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.artiste-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.artiste-cta .cta-button {
+  display: inline-block;
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.artiste-cta .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================
+   AUTRES ARTISTES
+   ============================ */
+.autres-artistes {
+  background-color: #F8F8F8;
+  padding: 60px 20px;
+}
+
+.autres-artistes h3 {
+  color: #1A1A1A;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.autres-liste {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.autre-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+}
+
+.autre-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.autre-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.autre-info {
+  padding: 20px;
+}
+
+.autre-info h4 {
+  color: #FFC107;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.autre-info p {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.voir-tous {
+  display: block;
+  text-align: center;
+  color: #FFC107;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 24px;
+  transition: color 0.3s;
+}
+
+.voir-tous:hover {
+  color: #FFB300;
+}
+

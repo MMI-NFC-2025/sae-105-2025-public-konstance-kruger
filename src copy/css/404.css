@@ -1,0 +1,156 @@
+/* ============================
+   PAGE ERREUR 404 (404.html)
+   ============================ */
+
+.error-section {
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gray) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  padding-top: calc(var(--header-height) + var(--spacing-xl));
+  position: relative;
+  overflow: hidden;
+}
+
+.error-container {
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================
+   CODE 404 ANIMÉ
+   ============================ */
+
+.error-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.number {
+  font-size: 120px;
+  font-weight: 900;
+  color: var(--color-red);
+  line-height: 1;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.number.zero {
+  animation-delay: 0.2s;
+}
+
+.number:last-child {
+  animation-delay: 0.4s;
+}
+
+/* ============================
+   MESSAGE D'ERREUR
+   ============================ */
+
+.error-title {
+  color: var(--color-red);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 2px;
+}
+
+.error-message {
+  color: var(--color-dark);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================
+   SUGGESTIONS
+   ============================ */
+
+.error-suggestions {
+  background-color: var(--color-white);
+  border-radius: 15px;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-title {
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  font-size: 16px;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  text-align: left;
+}
+
+.suggestions-list li a {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-red);
+  font-size: 15px;
+  font-weight: 600;
+  padding: var(--spacing-sm);
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.suggestions-list li a:hover {
+  background-color: rgba(139, 26, 26, 0.05);
+  transform: translateX(5px);
+}
+
+.suggestions-list svg {
+  flex-shrink: 0;
+}
+
+/* ============================
+   BOUTON PRINCIPAL
+   ============================ */
+
+.error-cta {
+  display: inline-block;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(139, 26, 26, 0.3);
+}
+
+.error-cta:hover {
+  background-color: #6B1313;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 26, 26, 0.4);
+}
+
+/* ============================
+   EMOJI DÉCORATIF
+   ============================ */
+
+.error-emoji {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+  opacity: 0.1;
+  animation: dance 3s ease-in-out infinite;
+  z-index: 1;
+}

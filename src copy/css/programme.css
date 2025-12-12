@@ -1,0 +1,169 @@
+/* ============================
+   PAGE PROGRAMME (programme.html)
+   ============================ */
+
+.programme-section {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl) var(--spacing-md);
+  padding-top: calc(var(--spacing-xl) + 20px);
+  min-height: 100vh;
+}
+
+.programme-title {
+  color: var(--color-red);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  letter-spacing: 2px;
+}
+
+/* ============================
+   SECTIONS PAR JOUR
+   ============================ */
+
+.jour-section {
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.jour-title {
+  color: var(--color-white);
+  background-color: var(--color-red);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(139, 26, 26, 0.3);
+}
+
+/* ============================
+   LISTE DES ÉVÉNEMENTS
+   ============================ */
+
+.programme-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.programme-item {
+  background-color: var(--color-white);
+  border-radius: 15px;
+  padding: var(--spacing-md);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: var(--spacing-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid var(--color-red);
+}
+
+.programme-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Variations pour les événements spéciaux */
+.programme-item.drone-special {
+  border-left-color: #3A9FD9;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+.programme-item.atelier-special {
+  border-left-color: #FF9500;
+  background: linear-gradient(135deg, #ffffff 0%, #fff8f0 100%);
+}
+
+.programme-item.finale-special {
+  border-left-color: #FFD700;
+  background: linear-gradient(135deg, #ffffff 0%, #fffef0 100%);
+}
+
+/* ============================
+   HORAIRE
+   ============================ */
+
+.programme-horaire {
+  flex-shrink: 0;
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heure {
+  color: var(--color-red);
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.drone-special .heure {
+  color: #3A9FD9;
+}
+
+.atelier-special .heure {
+  color: #FF9500;
+}
+
+.finale-special .heure {
+  color: #FFD700;
+}
+
+/* ============================
+   CONTENU
+   ============================ */
+
+.programme-content {
+  flex: 1;
+}
+
+.programme-artiste {
+  color: var(--color-dark);
+  font-size: 17px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.drone-icon {
+  color: #3A9FD9;
+}
+
+.programme-description {
+  color: var(--color-dark);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================
+   NOTE IMPORTANTE
+   ============================ */
+
+.programme-note {
+  max-width: 700px;
+  margin: var(--spacing-xl) auto 0;
+  background-color: var(--color-gray);
+  border-radius: 15px;
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--color-red);
+}
+
+.programme-note p {
+  color: var(--color-dark);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.programme-note strong {
+  color: var(--color-red);
+}

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Couleurs principales */
+  --color-red: #b01212;
+  --color-dark: #000000;
+  --color-white: #ffffff;
+  --color-gray: #d9d9d9;
+  
+  /* Typographie */
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Alexandria, sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  
+  /* Espacements */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+  
+  /* Header height */
+  --header-height: 70px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Titres : utiliser Oswald pour un look moderne et gras */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', var(--font-main);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================
+   HEADER FIXE
+   ============================ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: linear-gradient(to bottom right, #ba0c0c, #b71414);;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-sm);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo h1 {
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+}
+
+/* Menu Burger Button */
+.menu-toggle {
+  width: 40px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-white);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Animation menu burger ouvert */
+.menu-toggle.active span:first-child {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:last-child {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ============================
+   MENU NAVIGATION
+   ============================ */
+.menu-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  height: 100vh;
+  background-color: var(--color-red);
+  padding: var(--spacing-xl) var(--spacing-md);
+  padding-top: 100px;
+  transition: right 0.4s ease;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.menu-nav.active {
+  right: 0;
+}
+
+.menu-links {
+  margin-bottom: var(--spacing-lg);
+}
+
+.menu-links li {
+  margin-bottom: var(--spacing-md);
+}
+
+.menu-links a {
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  transition: color 0.3s;
+}
+
+.menu-links a:hover {
+  color: var(--color-red);
+}
+
+.menu-social {
+  margin-bottom: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-social li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.menu-social a {
+  color: var(--color-white);
+  font-size: 16px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.menu-social a:hover {
+  opacity: 1;
+}
+
+.menu-image {
+  width: 100%;
+  margin-top: var(--spacing-lg);
+  border-radius: 8px;
+  opacity: 0.3;
+}
+
+/* ============================
+   MAIN CONTENT
+   ============================ */
+main {
+  margin-top: var(--header-height);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+}
+
+.footer-logos {
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-logos p {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: var(--color-white);
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+.footer-contact {
+  margin-bottom: var(--spacing-lg);
+  font-style: normal;
+}
+
+.footer-contact p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-contact a {
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-partners img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.footer-legal {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.footer-legal a {
+  color: var(--color-white);
+  margin: 0 var(--spacing-xs);
+}
