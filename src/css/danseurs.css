@@ -7,7 +7,7 @@
    HERO SECTION
    ============================ */
 .danseurs-hero {
-  background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%);
+  background: linear-gradient(135deg, #a50000 0%, #7a0000 100%);
   padding: calc(var(--header-height) + var(--spacing-xl)) var(--spacing-md) var(--spacing-xl);
   text-align: center;
   position: relative;
@@ -105,7 +105,7 @@
 }
 
 .danseur-badge {
-  background-color: #FFC107;
+  background-color: #a50000;
   color: #1A0A0A;
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: 50px;
@@ -131,7 +131,7 @@
 }
 
 .danseur-name {
-  color: #FFC107;
+  color: #a50000;
   font-size: 24px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -141,7 +141,7 @@
 
 .danseur-tag {
   background-color: #FFF3E0;
-  color: #F57C00;
+  color: #a61600;
   padding: 4px var(--spacing-sm);
   border-radius: 12px;
   font-size: 12px;
@@ -167,7 +167,7 @@
 /* Bouton unique */
 .danseur-btn {
   display: block;
-  background: linear-gradient(135deg, #FFC107 0%, #FFB300 100%);
+  background: linear-gradient(135deg, #a50000 0%, #a60000 100%);
   color: #1A0A0A;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 50px;
@@ -175,19 +175,14 @@
   font-weight: 700;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
-}
-
-.danseur-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(255, 193, 7, 0.5);
+  box-shadow: 0 4px 15px rgba(165, 0, 0, 0.3);
 }
 
 /* ============================
    SECTION CTA
    ============================ */
 .danseurs-cta {
-  background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%);
+  background: linear-gradient(135deg, #a50000 0%, #ad0000 100%);
   padding: var(--spacing-xl) var(--spacing-md);
   text-align: center;
 }
@@ -198,7 +193,7 @@
   font-weight: 900;
   margin-bottom: var(--spacing-md);
   letter-spacing: 2px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
 .danseurs-cta p {
@@ -218,10 +213,10 @@
   font-size: 16px;
   font-weight: 700;
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
 }
 
 .danseurs-cta .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgb(255, 255, 255);
 }

@@ -151,7 +151,7 @@
 .programme-note {
   max-width: 700px;
   margin: var(--spacing-xl) auto 0;
-  background-color: var(--color-gray);
+  background-color: var(--color-white);
   border-radius: 15px;
   padding: var(--spacing-lg);
   border-left: 4px solid var(--color-red);

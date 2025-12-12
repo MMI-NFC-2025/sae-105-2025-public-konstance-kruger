@@ -1,4 +1,8 @@
 /* ============================
+   PAGE ACCUEIL (index.html)
+   ============================ */
+
+/* ============================
    SECTION HERO
    ============================ */
 .hero {
@@ -148,7 +152,7 @@
 
 .intro-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
 }
@@ -381,7 +385,7 @@
 
 .infos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--spacing-md);
   max-width: 800px;
   margin: 0 auto var(--spacing-lg);
